@@ -1,0 +1,42 @@
+{
+  "users": [
+    {
+      "name": "Aditya Verma",
+      "username": "adityaverma",
+      "email": "sdfsadf",
+      "phone": "asdf",
+      "id": "1"
+    },
+    {
+      "id": "b60b",
+      "name": "sanjhi",
+      "username": "adityaunofficial2002@gmail.com",
+      "email": "",
+      "phone": "2355346346",
+      "emial": "adsettyhy"
+    },
+    {
+      "id": "39bf",
+      "name": "sdgf",
+      "username": "dfg",
+      "email": "",
+      "phone": "dfg",
+      "emial": "dfg"
+    },
+    {
+      "id": "7b49",
+      "name": "sanjhi",
+      "username": "aditya verma",
+      "email": "",
+      "phone": "9078563412",
+      "emial": "sanjhiadi"
+    },
+    {
+      "id": "fcc1",
+      "name": "Aditya Verma",
+      "username": "newUsername@123",
+      "email": "adityav1708@gmail.com",
+      "phone": "9027481986"
+    }
+  ]
+}
