@@ -1,6 +1,9 @@
-import { Table, TableBody, TableCell, TableHead, TableRow ,styled} from "@mui/material";
+import { Table, TableBody, TableCell, TableHead, TableRow ,styled,Button} from "@mui/material";
 import { useEffect,useState} from "react";
+import { Link } from "react-router-dom";
+
 import { getUsers } from "../service/api";
+import { deleteUser } from "../service/api";
 
 const NewTable = styled(Table)`
   width : 70%;
@@ -17,7 +20,7 @@ const Thead = styled(TableRow)`
 
   const Tbody = styled(TableRow)`
   & > td {
-    font-size : 20px;
+    font-size : 16px;
   }
   `
 
@@ -33,7 +36,10 @@ const AllUsers = () => {
     setUsers(result.data)
   }
 
-
+  const deleteUserData = async(id)=>{
+    await deleteUser(id);
+    getUserDetails();
+  }
 
   return (
     <NewTable>
@@ -44,6 +50,7 @@ const AllUsers = () => {
           <TableCell>USERNAME</TableCell>
           <TableCell>EMAIL</TableCell>
           <TableCell>PHONE</TableCell>
+          <TableCell></TableCell>
         </Thead>
       </TableHead>
       <TableBody>
@@ -55,6 +62,10 @@ const AllUsers = () => {
               <TableCell>{user.username}</TableCell>
               <TableCell>{user.email}</TableCell>
               <TableCell>{user.phone}</TableCell>
+              <TableCell>
+                <Button variant="contained" style={{marginRight: 10}} component={Link} to={`/edit/${user.id}`}>Edit</Button>
+                <Button variant="contained" color="secondary" onClick={() => deleteUserData(user.id)}>Delete</Button>
+              </TableCell>
             </Tbody>
           ))
         }

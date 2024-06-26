@@ -4,6 +4,7 @@ import NavBar from './components/NavBar';
 import UnityInDiversity from './components/UnityInDiversity';
 import AddUser from './components/AddUser';
 import AllUsers from './components/AllUsers';
+import EditUser from './components/EditUser';
 
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 
@@ -21,6 +22,8 @@ function App() {
 
         <Route path="/add" element={<AddUser/>} >
         </Route>
+
+        <Route path='/edit/:id' element={<EditUser/>}></Route>
   
       </Routes>
     </BrowserRouter>
